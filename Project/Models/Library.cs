@@ -33,7 +33,7 @@ namespace console_library.Models
 
     public void PrintCheckedOut()
     {
-      System.Console.WriteLine("Books you have hcecked out.");
+      System.Console.WriteLine("Books you have checked out.");
       for (int i = 0; i < CheckedOut.Count; i++)
       {
         Book currentBook = CheckedOut[i];
@@ -55,6 +55,7 @@ namespace console_library.Models
       {
         Console.Clear();
         Console.WriteLine("INVALID SELEECTION");
+        return;
       }
       selectedBook.Available = false;
       CheckedOut.Add(selectedBook);
@@ -71,6 +72,7 @@ namespace console_library.Models
       {
         Console.Clear();
         Console.WriteLine("INVALID SELEECTION");
+        return;
       }
       selectedBook.Available = true;
       Books.Add(selectedBook);
